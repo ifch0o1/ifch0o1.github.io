@@ -6,6 +6,43 @@ html, body { /* Disable horizontal scrollbar */
     overflow-x: hidden;
 }
 
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+.pad-20 {
+	padding: 20px;
+}
+.pad-40 {
+	padding: 40px;
+}
+.pad-80 {
+	padding: 80px;
+}
+
+.link-image {
+	opacity: 0.8;
+	position: relative;
+	-webkit-transition: opacity .3s;
+	-moz-transition: opacity .3s;
+	-o-transition: opacity .3s;
+	transition: opacity .3s;
+}
+.link-image:hover {
+	opacity: 1;
+}
+.link-image > img {
+	z-index: 1;
+}
+.link-image-text {
+	color: #FF9898;
+	z-index: 0;
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+}
+
 #header {
 	background: url(/images/bg-5.jpg) no-repeat center;
 	background-position: 0% 36%;
@@ -17,6 +54,9 @@ html, body { /* Disable horizontal scrollbar */
 #header h1, #header p {
 	position: relative;
 	z-index: 1;
+}
+#about-me {
+	margin-top: 45px;
 }
 
 .generic-tab > span {
@@ -49,4 +89,16 @@ html, body { /* Disable horizontal scrollbar */
 
 .myself-image {
 	height: 240px;
+}
+
+#footer {
+	background-color: #424242;
+	color: #D1D1D1;
+	margin-top: 40px;
+	padding-top: 40px;
+}
+
+.footer-glyph {
+	font-size: 48px;
+	color: #949494;
 }

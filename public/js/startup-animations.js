@@ -21,13 +21,11 @@ $(document).ready(function() {
 		}
 		$img.css({
 			position: 'absolute',
-			// left: (orientation === 'left') ? -50 - $img.width() : w + $img.width() + 50
 			left: (orientation === 'left') ? -50 - $img.width() : 'auto',
 			right: (orientation === 'right') ? -50 - $img.width() : 'auto'
 		});
 		$wrapper.css('position', 'relative').append($img);
 		$img.animate({
-			// left: (orientation === 'left') ? offset : w - offset
 			left: (orientation === 'left') ? offset : 'auto',
 			right: (orientation === 'right') ? offset : 'auto'
 		}, options);
@@ -51,7 +49,7 @@ $(document).ready(function() {
 		$that.css('top', '25%');
 
 		setTimeout(function() {
-			sideAnimation($that, $('#header'), 'right', '25%', {
+			sideAnimation($that, $('#header'), 'right', '23%', {
 				duration: 800,
 				easing: 'easeOutCubic'
 			});
