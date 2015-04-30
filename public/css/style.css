@@ -80,8 +80,8 @@ html, body { /* Disable horizontal scrollbar */
 }
 
 #header {
-	background: url(/images/bg-5.jpg) no-repeat center;
-	background-position: 0% 36%;
+	background: url(/images/patterns/4x2.png);
+	border-top: 20px solid rgb(207, 108, 0);
 	border-radius: 0;
 	color: white;
 	text-shadow: 0px 0px 30px rgb(78, 78, 78);
@@ -106,13 +106,14 @@ html, body { /* Disable horizontal scrollbar */
 #section {
 	background-color: rgb(231, 231, 231);
 	padding: 20px inherit;
-	background-image: url(/images/bg-4.jpg);
+	background-image: url(/images/bg-6.jpg);
 	background-position: center;
 	/*min-height: 400px;*/
 	margin-top: 40px;
 }
 
 .tab-content {
+	padding-bottom: 20px;
 	background-color: rgba(255, 255, 255, 0.2);
 }
 .tab-content > div > ul { /* knowledge list style */
