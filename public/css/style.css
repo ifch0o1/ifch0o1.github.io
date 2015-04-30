@@ -11,6 +11,13 @@ html, body { /* Disable horizontal scrollbar */
     align-items: center;
 }
 
+.text-light {
+	color: #dadada;
+}
+.text-light-red {
+	color: #FD9797;
+}
+
 .pad-20 {
 	padding: 20px;
 }
@@ -19,6 +26,15 @@ html, body { /* Disable horizontal scrollbar */
 }
 .pad-80 {
 	padding: 80px;
+}
+.pad-top-20 {
+	padding-top: 20px;
+}
+.pad-top-40 {
+	padding-top: 40px;
+}
+.pad-top-80 {
+	padding-top: 80px;
 }
 
 .link-image {
@@ -31,16 +47,36 @@ html, body { /* Disable horizontal scrollbar */
 }
 .link-image:hover {
 	opacity: 1;
+	text-decoration: none;
 }
 .link-image > img {
 	z-index: 1;
 }
 .link-image-text {
-	color: #FF9898;
 	z-index: 0;
-	width: 100%;
 	text-align: center;
 	margin-top: 10px;
+}
+.link-image-text .glyphicon {
+	margin-left: 5px;
+	color: #000;
+}
+.work-item-row {
+	margin-top: 40px;
+}
+.work-item-row .link-wrapper {
+	text-align: center;
+}
+.work-item-row .resume-wrapper {
+	margin-top: 13px;
+}
+.work-item-row.profiles-wrapper {
+	text-align: center;
+	margin-top: 40px;
+}
+
+.my-profile-icon-link {
+	margin: 0 30px;
 }
 
 #header {

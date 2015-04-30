@@ -11,7 +11,9 @@ var genTabs = (function() {
 	var content = (function() {
 		function load(path) {
 			// contentHolder.empty();
-			contentHolder.load(path);
+			contentHolder.load(path, function() {
+				_enableTooltips();
+			});
 		}
 
 		return {

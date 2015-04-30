@@ -31,18 +31,20 @@ $(document).ready(function() {
 		}, options);
 	}
 
-	function isScrolledIntoView(elem) {
-	    var $elem = $(elem);
-	    var $window = $(window);
+	// The below commented function will be used later.
 
-	    var docViewTop = $window.scrollTop();
-	    var docViewBottom = docViewTop + $window.height();
+	// function isScrolledIntoView(elem) {
+	//     var $elem = $(elem);
+	//     var $window = $(window);
 
-	    var elemTop = $elem.offset().top;
-	    var elemBottom = elemTop + $elem.height();
+	//     var docViewTop = $window.scrollTop();
+	//     var docViewBottom = docViewTop + $window.height();
 
-	    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-	}
+	//     var elemTop = $elem.offset().top;
+	//     var elemBottom = elemTop + $elem.height();
+
+	//     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+	// }
 
 	$('<img src="' + icons.portfolio + '">').load(function() {
 		var $that = $(this);
