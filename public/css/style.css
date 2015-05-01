@@ -5,6 +5,9 @@ html, body { /* Disable horizontal scrollbar */
     max-width: 100%;
     overflow-x: hidden;
 }
+.tooltip-inner {
+    width: 350px; 
+}
 
 .vertical-align {
     display: flex;
@@ -51,15 +54,15 @@ html, body { /* Disable horizontal scrollbar */
 }
 .link-image > img {
 	z-index: 1;
+	margin-bottom: 10px;
 }
 .link-image-text {
 	z-index: 0;
 	text-align: center;
-	margin-top: 10px;
 }
 .link-image-text .glyphicon {
 	margin-left: 5px;
-	color: #000;
+	color: #6EDBFF;
 }
 .work-item-row {
 	margin-top: 40px;
@@ -79,6 +82,19 @@ html, body { /* Disable horizontal scrollbar */
 	margin: 0 30px;
 }
 
+.text-success-light {
+	color: #5CE05E;
+}
+.text-primary-light {
+	color: #69CFFF;
+}
+.text-muted-light {
+	color: #D2B0B0;
+}
+.text-danger-light {
+	color: #FF8280;
+}
+
 #header {
 	background: url(/images/patterns/4x2.png);
 	border-top: 20px solid rgb(207, 108, 0);
@@ -95,26 +111,32 @@ html, body { /* Disable horizontal scrollbar */
 	margin-top: 45px;
 }
 
-.generic-tab > span {
+.generic-tab > span.btn {
 	width: 100%;
+	color: #FFE4C4;
+	background-color: #444349;
+	border-color: #3B3B3B;
 }
-.generic-tab.active > span {
-	background-color: #4D9CE0;
-	border-color: #1088AC;
+
+.generic-tab.active > span.btn {
+	text-shadow: yellow 0px 0px 17px;
+	color: #FFA200;
+	background-color: #3E3D44;
+	border-color: #363636;
 }
 
 #section {
-	background-color: rgb(231, 231, 231);
+	background: url(/images/patterns/8x2.png);
 	padding: 20px inherit;
-	background-image: url(/images/bg-6.jpg);
-	background-position: center;
 	/*min-height: 400px;*/
 	margin-top: 40px;
+	padding: 15px;
 }
 
 .tab-content {
 	padding-bottom: 20px;
-	background-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.1);
+	color: #fff;
 }
 .tab-content > div > ul { /* knowledge list style */
 	list-style-type: circle;
@@ -131,8 +153,10 @@ html, body { /* Disable horizontal scrollbar */
 #footer {
 	background-color: #424242;
 	color: #D1D1D1;
-	margin-top: 40px;
 	padding-top: 40px;
+	margin-top: 0px;
+	background-color: #444349;
+	border-top: 1px solid #525252;
 }
 
 .footer-glyph {
