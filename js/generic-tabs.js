@@ -16,11 +16,17 @@ var genTabs = (function() {
 			contentHolder.css({height: currentHeight, overflow: 'hidden'});
 			contentHolder.load(path, function() {
 				contentHolder.stop();
-				$(contentHolder).add('img').ready(function() {
+				
+				function animateHeight() {
 					var loadedContentHeight = contentHolder.css('height', 'auto').height();
 					contentHolder.height(currentHeight);
-					contentHolder.animate({height: loadedContentHeight}, 1300, 'easeOutQuint');
-				});
+					contentHolder.animate({height: loadedContentHeight}, 1300, 'easeOutQuint');		
+				}
+				
+				// Wait for a while. To get correct height the browser need to render the images first.
+				setTimeout(animateHeight, 150);
+				
+				// Enable bootstrap tooltips for loaded content.
 				_enableTooltips();
 			});
 		}
