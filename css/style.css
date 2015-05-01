@@ -81,7 +81,10 @@ html, body { /* Disable horizontal scrollbar */
 	margin-top: 40px;
 }
 .contact-row {
-  margin-top: 30px;
+    margin-top: 30px;
+}
+.contact-row:last-child {
+    margin-bottom: 20px;
 }
 
 .my-profile-icon-link {

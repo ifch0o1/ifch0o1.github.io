@@ -24,7 +24,7 @@ var genTabs = (function() {
 				}
 				
 				// Wait for a while. To get correct height the browser need to render the images first.
-				setTimeout(animateHeight, 150);
+				setTimeout(animateHeight, 300);
 				
 				// Enable bootstrap tooltips for loaded content.
 				_enableTooltips();
