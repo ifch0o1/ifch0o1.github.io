@@ -12,8 +12,15 @@ var genTabs = (function() {
 
 	var content = (function() {
 		function load(path) {
-			// contentHolder.empty();
+			var currentHeight = contentHolder.height();
+			contentHolder.css({height: currentHeight, overflow: 'hidden'});
 			contentHolder.load(path, function() {
+				contentHolder.stop();
+				$(contentHolder).add('img').ready(function() {
+					var loadedContentHeight = contentHolder.css('height', 'auto').height();
+					contentHolder.height(currentHeight);
+					contentHolder.animate({height: loadedContentHeight}, 1300, 'easeOutQuint');
+				});
 				_enableTooltips();
 			});
 		}
