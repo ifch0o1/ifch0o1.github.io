@@ -8,7 +8,7 @@ $(document).ready(function() {
 		project: 'images/icons/proj.png',
 		idea: 'images/icons/idea.png'
 	};
-
+	
 	var w = $(this).width(),
 	    h = $(this).height();
 
