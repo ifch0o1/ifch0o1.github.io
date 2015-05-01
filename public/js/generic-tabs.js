@@ -1,3 +1,5 @@
+'use strict';
+
 var genTabs = (function() {
 	var tabs = $('.generic-tab');
 	var contentHolder = $('.tab-content');
