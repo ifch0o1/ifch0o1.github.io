@@ -1,8 +1,8 @@
 'use strict';
 
 var genTabs = (function() {
-	var tabs = $('.generic-tab');
-	var contentHolder = $('.tab-content');
+	var $tabs = $('.generic-tab');
+	var $contentHolder = $('.tab-content');
 	var templates = {
 		knowledge: 'templates/tab-content/knowledge.html',
 		work: 'templates/tab-content/work.html',
@@ -12,19 +12,22 @@ var genTabs = (function() {
 
 	var content = (function() {
 		function load(path) {
-			var currentHeight = contentHolder.height();
-			contentHolder.css({height: currentHeight, overflow: 'hidden'});
-			contentHolder.load(path, function() {
-				contentHolder.stop();
+			var currentHeight = $contentHolder.height();
+			$contentHolder.css({height: currentHeight, overflow: 'hidden'});
+			$contentHolder.load(path, function() {
+				$contentHolder.stop();
 				
 				function animateHeight() {
-					var loadedContentHeight = contentHolder.css('height', 'auto').height();
-					contentHolder.height(currentHeight);
-					contentHolder.animate({height: loadedContentHeight}, 1300, 'easeOutQuint');		
+					var loadedContentHeight = $contentHolder.css('height', 'auto').height();
+					$contentHolder.height(currentHeight);
+					$contentHolder.animate({height: loadedContentHeight}, 500, 'easeOutQuint');
 				}
-				
-				// Wait for a while. To get correct height the browser need to render the images first.
-				setTimeout(animateHeight, 300);
+				animateHeight();
+
+				var $images = $('img', $contentHolder);
+           		$images.bind('load', function(){ 
+                	animateHeight();
+            	});
 				
 				// Enable bootstrap tooltips for loaded content.
 				_enableTooltips();
@@ -65,6 +68,6 @@ var genTabs = (function() {
 	$('.tab-knowledge').trigger('click');
 
 	return {
-		list: tabs
+		list: $tabs
 	}
 }());
