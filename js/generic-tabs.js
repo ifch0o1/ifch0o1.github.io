@@ -25,7 +25,7 @@ var genTabs = (function() {
 				animateHeight();
 
 				var $images = $('img', $contentHolder);
-           		$images.bind('load', function(){ 
+           		$images.last().bind('load', function(){ 
                 	animateHeight();
             	});
 				
