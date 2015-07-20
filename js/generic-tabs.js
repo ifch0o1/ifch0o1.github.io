@@ -19,6 +19,7 @@ var genTabs = (function() {
 				function animateHeight() {
 					var loadedContentHeight = $contentHolder.css('height', 'auto').height();
 					$contentHolder.height(currentHeight);
+					$contentHolder.stop();
 					$contentHolder.animate({height: loadedContentHeight}, 500, 'easeOutQuint');
 				}
 				animateHeight();
