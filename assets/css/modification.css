@@ -1,0 +1,36 @@
+#hero {
+    background-image: url(https://picsum.photos/1920/1080/?blur=1&grayscale);
+    background-color: grey;
+}
+
+.hero-table-cell {
+    background: rgba(0, 0, 0, 0.6);
+    mix-blend-mode: exclusion;
+}
+
+.skills-multiprogress, .skills-multiprogress .progress-bar {
+    overflow: visible;
+    font-size: var(--bs-body-font-size);
+}
+.skills-multiprogress .multi-skill {
+    transform: translate(0px, -1.55rem);
+    font-size: bold;
+}
+.about-img .avatar-image {
+    width: 150px;
+    height: 150px;
+}
+.about-img .avatar-tooltip {
+    position: absolute;
+    background-color: black;
+    text-align: center;
+    color: #fff;
+    margin-left: 10px;
+    opacity: 0;
+    transform: scale(0.1);
+    transition: .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.about-me-info-box:hover .avatar-tooltip {
+    transform: translate(0px, -110%) scale(1);
+    opacity: 1;
+}
