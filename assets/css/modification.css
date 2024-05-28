@@ -1,5 +1,5 @@
 #hero {
-    background-image: url(https://picsum.photos/1920/1080/?blur=1&grayscale);
+    background-image: url(https://picsum.photos/1920/1080/?blur=1&grayscale&random=10);
     background-color: grey;
 }
 
