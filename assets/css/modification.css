@@ -5,7 +5,7 @@
 
 .hero-table-cell {
     background: rgba(0, 0, 0, 0.6);
-    mix-blend-mode: exclusion;
+    /* mix-blend-mode: exclusion; */
 }
 
 .skills-multiprogress, .skills-multiprogress .progress-bar {
@@ -18,7 +18,7 @@
 }
 .about-img .avatar-image {
     width: 150px;
-    height: 150px;
+    /* height: 150px; */
 }
 .about-img .avatar-tooltip {
     position: absolute;
@@ -34,3 +34,15 @@
     transform: translate(0px, -110%) scale(1);
     opacity: 1;
 }
+
+.hero .hero-title {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .hero .hero-title {
+      font-size: 2.5rem;
+    }
+  }
